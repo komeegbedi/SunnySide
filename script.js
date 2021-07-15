@@ -64,11 +64,26 @@ const updateUI =  (data) => {
     }
 }
 
+const loadImages = () => {
+
+    let value = localStorage.getItem('imageObj');
+
+    if(value){
+        updateUI(JSON.parse(value));
+    }
+    else{
+        getImages()
+        .then(data => {
+            localStorage.setItem('imageObj', JSON.stringify(data));
+            updateUI(data);
+        })
+        .catch(err => console.log(err.message));
+    }
+}
+
 openMenu();
 
-getImages()
-    .then(data => updateUI(data))
-    .catch(err => console.log(err.message));
+loadImages();
 
 onscroll = () => {
     fixedOnScroll();
