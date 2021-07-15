@@ -201,7 +201,7 @@ nav.navbar .navbar-brand a{
 div.toggle-switch{
     display: block;
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     left: 30px;
     z-index: 10;
 }
