@@ -469,9 +469,9 @@ footer .footer-social ul.footer-menu{
         z-index: 100;
     }
 
-    nav.navbar.onScroll div.menu ul li a{
+    /* nav.navbar.onScroll div.menu ul li a{
         color: #000;
-    }
+    } */
 
     .container{
         max-width: 1440px;
@@ -518,7 +518,7 @@ footer .footer-social ul.footer-menu{
     }
 
     div.menu ul li a{
-        color: #fff;
+        color: #000;
         font-weight: 400;
         font-family: 'Open Sans', sans-serif;
         
