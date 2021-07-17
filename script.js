@@ -29,7 +29,7 @@ const getImages = async () => {
     const API_KEY = '6W37YsXGmsBvGwCjnwwUW2lMcylWHmBWM0H1MqPDuUs';
 
     const basURL = 'https://api.unsplash.com/search/photos/';
-    const query = `?client_id=${API_KEY}&query=furniture&orientation=landscape&ar=4:3&fit=crop?per_page=10`;
+    const query = `?client_id=${API_KEY}&query=furniture&orientation=landscape`;
 
     const response = await fetch(basURL + query);
 
@@ -60,7 +60,7 @@ const updateUI =  (data) => {
     }
 
     for (let index = 0; index < moreImg.length; index++) {
-        moreImg[index].src = results[gridImg.length + index].urls.regular;
+        moreImg[index].src = results[gridImg.length + 1 + index].urls.regular;
     }
 }
 
@@ -68,7 +68,7 @@ const loadImages = () => {
 
     let value = localStorage.getItem('imageObj');
 
-    if(value){
+    if(!value){
         updateUI(JSON.parse(value));
     }
     else{
@@ -82,7 +82,6 @@ const loadImages = () => {
 }
 
 openMenu();
-
 loadImages();
 
 onscroll = () => {
