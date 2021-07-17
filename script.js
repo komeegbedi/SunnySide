@@ -39,15 +39,13 @@ const getImages = async () => {
 
    const data = await response.json();
 
-   console.log(data);
-
-   return data;
+   return data.results;
 }
 
 
 const updateUI =  (data) => {
 
-    const {total, total_pages, results} = data;
+    const results = data;
 
     const hero = document.querySelector('section.hero');
     const gridImg = document.querySelectorAll('.img-features div.grid-img img');
