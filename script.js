@@ -66,7 +66,7 @@ const loadImages = () => {
 
     let value = localStorage.getItem('imageObj');
 
-    if(!value){
+    if(value){
         updateUI(JSON.parse(value));
     }
     else{
