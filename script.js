@@ -51,7 +51,6 @@ const updateUI =  (data) => {
     const gridImg = document.querySelectorAll('.img-features div.grid-img img');
     const moreImg = document.querySelectorAll('.more-img img');
     
-    console.log(results);
     hero.style.backgroundImage = `url(${results[0].urls.regular})`;
 
     for(let index = 0; index < gridImg.length; index++){
