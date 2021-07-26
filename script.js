@@ -5,11 +5,13 @@ const scroll = document.querySelector('.scroll');
 const openMenu = ()=>{
 
     const burgerBar = document.querySelector('div#nav-icon3');
+    const moon = document.querySelector('div.toggle-switch');
 
     burgerMenu.addEventListener('click' , () => {
 
         burgerBar.classList.toggle('open');
         menuList.classList.toggle('show');
+        moon.classList.toggle('menu-open');
     });
 }
 

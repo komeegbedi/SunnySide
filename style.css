@@ -226,6 +226,9 @@ div.toggle-switch svg{
     width: 40px;
 }
 
+div.toggle-switch.menu-open svg{
+    fill: var(--primary) !important;
+}
 
 div.menu{
     -webkit-transition: all .25s ease-in-out;
